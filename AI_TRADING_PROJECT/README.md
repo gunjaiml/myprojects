@@ -8,7 +8,7 @@ The project demonstrates how an agentic workflow can analyze simulated market da
 
 ---
 
-## 🚀 Project Overview
+## Project Overview
 
 The system implements a human-in-the-loop AI trading workflow:
 
@@ -277,7 +277,7 @@ The approval endpoint resumes the interrupted LangGraph execution using the trad
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 ### Backend
 
@@ -308,7 +308,7 @@ The approval endpoint resumes the interrupted LangGraph execution using the trad
 
 ---
 
-## 🔐 Configuration
+##  Configuration
 
 Create a `.env` file:
 
@@ -393,18 +393,9 @@ This project helped me understand and implement several concepts relevant to **A
 Possible improvements for future versions:
 
 * Connect to a real market-data provider
-* Integrate a paper-trading brokerage API
-* Add authentication and authorization
-* Add portfolio and position management
-* Add risk-management rules
-* Add transaction history
-* Add structured LLM outputs
-* Add automated evaluation of LLM analysis
-* Add logging and observability
-* Add unit and integration tests
+* Add evaluation
 * Add Docker deployment
 * Add retry and failure-handling mechanisms
-* Add rate limiting and API security
 * Add asynchronous/background workflow execution
 
 ---
@@ -412,15 +403,3 @@ Possible improvements for future versions:
 ## ⚠️ Disclaimer
 
 This project is intended for **educational and demonstration purposes only**.
-
-The current implementation uses simulated market data and simulated trade execution. It is not financial advice and should not be used for real-world trading without substantial additional engineering, validation, security controls and regulatory considerations.
-
----
-
-## 👨‍💻 Author
-
-**Gunja**
-
-Interested in **Generative AI, Agentic AI, LLM applications and backend engineering**.
-
-This project was built to explore how AI agents can be integrated with backend systems and controlled workflows using modern AI engineering patterns.
