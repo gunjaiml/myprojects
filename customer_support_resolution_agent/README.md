@@ -1,8 +1,7 @@
 # Customer Support Resolution Agent
 
-> A SaaS-style customer support agent that answers product questions,
-> looks up real order status, and escalates to a human ticket when it
-> can't confidently resolve the issue.
+> Acustomer support agent that answers product questions,
+> looks up real order status, and escalates to a human ticket when it can't confidently resolve the issue.
 
 Built with **LangChain** for the agent + tool-calling layer and
 **Nebius Token Factory** for both the LLM (`Qwen/Qwen3-30B-A3B`) and
@@ -139,16 +138,10 @@ it cannot resolve in one more step. When it escalates, it returns the
 ticket ID to the customer and the ticket is appended to
 `data/tickets.json` so you can see it in the Streamlit sidebar.
 
-## 🔁 Extending it
+## 🔁 Further improvement
 
 - Swap `data/orders.json` for a real database query.
 - Replace FAISS with a managed vector DB (Qdrant, Pinecone) — only
   `ingest.py` and `tools._get_kb` change.
 - Add tools: `update_shipping_address`, `issue_store_credit`,
   `start_return`. Register them in `tools.ALL_TOOLS`.
-- Plug `create_ticket` into Zendesk / Linear / your real ticketing
-  system.
-
-## 📄 License
-
-MIT — see the repo root [LICENSE](../../LICENSE).
