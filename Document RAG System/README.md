@@ -257,8 +257,7 @@ The prompt explicitly instructs the model to rely on the provided context and re
 | Technology            | Purpose                              |
 | --------------------- | ------------------------------------ |
 | **Python**            | Core implementation                  |
-| **PyMuPDF**           | PDF text extraction                  |
-| **spaCy**             | Sentence segmentation                |
+| **PyMuPDF**           | PDF text extraction                  |                
 | **OpenAI Embeddings** | Text vectorization                   |
 | **Elasticsearch**     | Vector storage and similarity search |
 | **tiktoken**          | Token counting                       |
@@ -332,19 +331,6 @@ ES_INDEX_NAME=your_index_name
 PDF_DIR=path/to/pdf/documents
 ```
 
-**Never commit your `.env` file or API keys to GitHub.**
-
-Add it to `.gitignore`:
-
-```gitignore
-.env
-venv/
-__pycache__/
-*.pyc
-```
-
----
-
 ## ▶️ Running the Project
 
 Run:
@@ -415,8 +401,7 @@ and the system can be used for querying.
 
 The application can query the indexed documents using a natural-language question such as:
 
-```text
-Sabka Saath, Sabka Vikas
+```
 ```
 
 The system retrieves semantically relevant chunks from Elasticsearch and provides them as context to the LLM.
@@ -524,28 +509,8 @@ Potential improvements for taking this project further include:
 * Query rewriting
 * Conversation memory
 * Streaming responses
-* FastAPI backend
-* Authentication and authorization
 * Evaluation datasets and RAG evaluation metrics
 * Observability and tracing
-* Docker-based deployment
-* Automated testing
-* CI/CD pipeline
-* Background document ingestion
 * Support for additional document formats
 
 ---
-
-## 💼 Resume Description
-
-**Document RAG System — Python, Elasticsearch, OpenAI, spaCy**
-
-> Built an end-to-end Retrieval-Augmented Generation (RAG) pipeline for querying PDF documents using sentence-based chunking, OpenAI embeddings, and Elasticsearch vector similarity search. Implemented token-aware context construction, metadata-based document tracking, configurable prompt templates, API retry handling, and modular document ingestion/retrieval/generation components.
-
-### Key Resume Points
-
-* Developed an end-to-end **RAG pipeline** covering PDF parsing, sentence-based chunking, embedding generation, vector indexing, semantic retrieval, and LLM response generation.
-* Implemented **Elasticsearch dense-vector search with cosine similarity** to retrieve relevant document chunks for user queries.
-* Added **token-aware context construction and embedding input truncation** to manage LLM and embedding model constraints.
-* Designed a modular Python architecture separating **parsing, chunking, embedding, indexing, retrieval, and generation** responsibilities.
-* Implemented **exponential-backoff retries and structured logging** for improved API reliability and debugging.
